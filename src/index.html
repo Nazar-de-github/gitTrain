@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Test page</title>
-
+        <meta name="viewport" content="width=200px, initial-scale=0.7" />
         <style>
             .flexys {
                 display:flex;
@@ -27,6 +27,12 @@
             .flexys:hover{
                 background-color: rgb(131, 24, 115);
             }
+
+            @media (max-width:800px){
+                .flexys {
+                    flex-direction:column;
+                }
+            }
         </style>
     </head>
 
@@ -43,7 +49,9 @@
         </div>
         
 
-
-
+        <hr>
+<h1>
+    Heaader
+</h1>
     </body>
 </html>
