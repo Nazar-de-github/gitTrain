@@ -20,5 +20,5 @@ jobs:
       - name: Comment
         uses: hasura/comment-progress@v2.3.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           message: "Hello from workflow"
