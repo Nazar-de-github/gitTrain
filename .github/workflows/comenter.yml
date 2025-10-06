@@ -2,13 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [ "master" ]
   pull_request:
-    branches: [ "master" ]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  pull-requests: write
   
 jobs:
   build:
@@ -16,9 +14,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Comment
-        uses: hasura/comment-progress@v2.3.0
+      - name: Echo
+        uses: JoseThen/comment-pr@v1.2.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          message: "Hello from workflow"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          comment: 'Hello! '
+
