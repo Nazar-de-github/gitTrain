@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Comment
-        uses: hasura/comment-progress@v2.3.0
+        uses: GrantBirki/comment@v2.1.1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          message: "Hello from workflow"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: "Hello from workf
