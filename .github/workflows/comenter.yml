@@ -2,9 +2,7 @@ name: CI
 
 on:
   push:
-    branches:
   pull_request:
-    branches:
   workflow_dispatch:
 
 permissions:
@@ -19,8 +17,3 @@ jobs:
       - name: Echo
         run: echo 'KSKDKKD'
 
-      - name: Comment
-        uses: GrantBirki/comment@v2.1.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          body: "Hello from workf
