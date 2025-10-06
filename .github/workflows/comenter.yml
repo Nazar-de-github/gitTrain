@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches:
   pull_request:
-    branches: [ "master" ]
+    branches:
   workflow_dispatch:
 
 permissions:
@@ -16,6 +16,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Echo
+        run: echo 'KSKDKKD'
 
       - name: Comment
         uses: GrantBirki/comment@v2.1.1
