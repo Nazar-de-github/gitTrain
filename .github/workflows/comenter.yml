@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Comment
+        uses: hasura/comment-progress@v2.3.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: "Hello from workflow"
